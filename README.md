@@ -12,7 +12,7 @@ Setup
 1. If you haven't already, download [sa-mp server] which is available on the forums. Store it wherever you like. If you store it in your project directory, don't forget to add it to the `.gitignore` file.
 1. Open the `Boilerplate.sln` with Visual Studio.
 1. In the Solution explorer, double click on Properties under the Boilerplate project.
-1. Switch to the Debug tab, and uder Start Action select Start external program. Click on ... and select `samp-server.exe` from your server directory.
+1. Switch to the Debug tab, and under Start Action select Start external program. Click on ... and select `samp-server.exe` from your server directory. Under Start Options, set Working directory to `..`.
 1. _optional_ If you like to change the name of your project follow these instructions:
  1. In the Solution Explorer, right click on the Boilerplate Solution and click Rename. Rename it to your gamemode's name. (It is best not to use spaces, and use CamelCase, for example `RiverShell`)
  1. In the Solution Explorer, right click on the Boilerplate Project and click Rename. Rename it to your gamemode's name.
