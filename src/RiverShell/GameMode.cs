@@ -47,7 +47,7 @@ namespace RiverShell
 
         public static bool ObjectiveReached;
 
-        public override bool OnGameModeInit()
+        protected override void OnInitialized(EventArgs e)
         {
             SetGameModeText("Rivershell");
             ShowPlayerMarkers(0);
@@ -213,7 +213,7 @@ namespace RiverShell
             Console.WriteLine("  SAMPSHARP PORT");
             Console.WriteLine("----------------------------------");
 
-            return base.OnGameModeInit();
+            base.OnInitialized(e);
         }
 
         protected override void LoadControllers(ControllerCollection controllers)
