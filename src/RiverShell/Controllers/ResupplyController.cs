@@ -19,13 +19,13 @@ using SampSharp.GameMode.Natives;
 
 namespace RiverShell.Controllers
 {
-    public class ResupplyController : IController, IEventListener
+    public class ResupplyController : IEventListener
     {
         public void RegisterEvents(BaseMode gameMode)
         {
             gameMode.PlayerUpdate += (sender, args) =>
             {
-                var player = args.Player as Player;
+                var player = sender as Player;
                 if (player.IsInRangeOfPoint(2.5f, GameMode.BlueTeam.ResupplyPosition))
                 {
                     Resupply(player);

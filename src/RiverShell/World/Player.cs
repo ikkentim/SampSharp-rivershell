@@ -11,6 +11,7 @@
 // 
 // For more information, please refer to <http://unlicense.org>
 
+using System;
 using SampSharp.GameMode.Definitions;
 using SampSharp.GameMode.Events;
 using SampSharp.GameMode.Natives;
@@ -38,7 +39,7 @@ namespace RiverShell.World
 
         public int LastResupplyTime { get; set; }
 
-        public override void OnRequestClass(PlayerRequestClassEventArgs e)
+        public override void OnRequestClass(RequestClassEventArgs e)
         {
             Position = new Vector(1984.4445f, 157.9501f, 55.9384f);
             CameraPosition = new Vector(1984.4445f, 160.9501f, 55.9384f);
@@ -61,7 +62,7 @@ namespace RiverShell.World
             base.OnRequestClass(e);
         }
 
-        public override void OnConnected(PlayerEventArgs e)
+        public override void OnConnected(EventArgs e)
         {
             GameText("~r~SA-MP: ~w~Rivershell", 2000, 5);
 
@@ -89,7 +90,7 @@ namespace RiverShell.World
             base.OnConnected(e);
         }
 
-        public override void OnSpawned(PlayerEventArgs e)
+        public override void OnSpawned(SpawnEventArgs e)
         {
             if (LastDeathTick != 0 && Native.GetTickCount() - LastDeathTick < (Config.RespawnTime*1000))
             {
@@ -139,7 +140,7 @@ namespace RiverShell.World
             }
         }
 
-        public override void OnDeath(PlayerDeathEventArgs e)
+        public override void OnDeath(DeathEventArgs e)
         {
             var killer = e.Killer as Player;
             SendDeathMessageToAll(killer, this, e.DeathReason);
@@ -153,7 +154,7 @@ namespace RiverShell.World
             base.OnDeath(e);
         }
 
-        public override void OnUpdate(PlayerEventArgs e)
+        public override void OnUpdate(PlayerUpdateEventArgs e)
         {
             if (IsNPC) return;
 

@@ -11,6 +11,7 @@
 // 
 // For more information, please refer to <http://unlicense.org>
 
+using System;
 using RiverShell.World;
 using SampSharp.GameMode;
 using SampSharp.GameMode.Controllers;
@@ -30,9 +31,9 @@ namespace RiverShell.Controllers
             gameMode.PlayerStateChanged += gameMode_PlayerStateChanged;
         }
 
-        private void gameMode_PlayerStateChanged(object sender, PlayerStateEventArgs e)
+        private void gameMode_PlayerStateChanged(object sender, StateEventArgs e)
         {
-            var player = e.Player as Player;
+            var player = sender as Player;
 
             switch (e.NewState)
             {
@@ -52,9 +53,9 @@ namespace RiverShell.Controllers
             }
         }
 
-        private void checkpoint_Enter(object sender, PlayerEventArgs e)
+        private void checkpoint_Enter(object sender, EventArgs e)
         {
-            var player = e.Player as Player;
+            var player = sender as Player;
 
             GtaVehicle vehicle = player.Vehicle;
 

@@ -54,7 +54,7 @@ namespace RiverShell
             ShowNameTags(true);
             SetWorldTime(17);
             SetWeather(11);
-            UsePlayerPedAnims();
+            UsePlayerPedAnimations();
             EnableVehicleFriendlyFire();
             SetNameTagDrawDistance(110.0f);
             DisableInteriorEnterExits();

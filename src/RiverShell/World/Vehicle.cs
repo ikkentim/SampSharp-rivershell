@@ -22,14 +22,14 @@ namespace RiverShell.World
         {
         }
 
-        public override void OnStreamIn(PlayerVehicleEventArgs e)
+        public override void OnStreamIn(PlayerEventArgs e)
         {
             var player = e.Player as Player;
 
             if (this == GameMode.BlueTeam.TargetVehicle)
-                e.Vehicle.SetParamsForPlayer(player, true, player.Team == GameMode.GreenTeam);
+                SetParamsForPlayer(player, true, player.Team == GameMode.GreenTeam);
             else if (this == GameMode.GreenTeam.TargetVehicle)
-                e.Vehicle.SetParamsForPlayer(player, true, player.Team == GameMode.BlueTeam);
+                SetParamsForPlayer(player, true, player.Team == GameMode.BlueTeam);
 
             base.OnStreamIn(e);
         }
