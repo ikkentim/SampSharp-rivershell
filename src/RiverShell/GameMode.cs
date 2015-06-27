@@ -1,15 +1,17 @@
-﻿// SampSharp
-// Copyright (C) 2014 Tim Potze
+﻿// RiverShell
+// Copyright 2015 Tim Potze
 // 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-// IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-// OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-// OTHER DEALINGS IN THE SOFTWARE.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
 // 
-// For more information, please refer to <http://unlicense.org>
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 using System;
 using RiverShell.Controllers;
@@ -72,10 +74,12 @@ namespace RiverShell
                 Weapon.Sniper, 10);
 
             // Objective vehicles
-            BlueTeam.TargetVehicle = GtaVehicle.Create(453, new Vector3(2184.7156f, -188.5401f, -0.0239f), 0.0000f, 114, 1,
+            BlueTeam.TargetVehicle = GtaVehicle.Create(453, new Vector3(2184.7156f, -188.5401f, -0.0239f), 0.0000f, 114,
+                1,
                 100);
             // gr reefer
-            GreenTeam.TargetVehicle = GtaVehicle.Create(453, new Vector3(2380.0542f, 535.2582f, -0.0272f), 178.4999f, 79, 7,
+            GreenTeam.TargetVehicle = GtaVehicle.Create(453, new Vector3(2380.0542f, 535.2582f, -0.0272f), 178.4999f, 79,
+                7,
                 100); // bl reefer
 
             // Green Dhingys
