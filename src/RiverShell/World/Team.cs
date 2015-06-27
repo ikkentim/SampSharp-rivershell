@@ -11,6 +11,7 @@
 // 
 // For more information, please refer to <http://unlicense.org>
 
+using SampSharp.GameMode;
 using SampSharp.GameMode.Pools;
 using SampSharp.GameMode.SAMP;
 using SampSharp.GameMode.World;
@@ -23,17 +24,18 @@ namespace RiverShell.World
 
         public string GameTextTeamName { get; set; }
 
-        public Vector Target { get; set; }
+        public Vector3 Target { get; set; }
 
         public int TimesCaptured { get; set; }
 
         public GtaVehicle TargetVehicle { get; set; }
 
-        public Vector FixedSpectatePosition { get; set; }
+        public Vector3 FixedSpectatePosition { get; set; }
 
-        public Vector FixedSpectateLookAtPosition { get; set; }
+        public Vector3 FixedSpectateLookAtPosition { get; set; }
 
-        public Vector ResupplyPosition { get; set; }
+        public Vector3 ResupplyPosition { get; set; }
+
         public int Id { get; set; }
     }
 }

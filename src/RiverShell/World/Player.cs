@@ -12,6 +12,7 @@
 // For more information, please refer to <http://unlicense.org>
 
 using System;
+using SampSharp.GameMode;
 using SampSharp.GameMode.Definitions;
 using SampSharp.GameMode.Events;
 using SampSharp.GameMode.Natives;
@@ -41,9 +42,9 @@ namespace RiverShell.World
 
         public override void OnRequestClass(RequestClassEventArgs e)
         {
-            Position = new Vector(1984.4445f, 157.9501f, 55.9384f);
-            CameraPosition = new Vector(1984.4445f, 160.9501f, 55.9384f);
-            SetCameraLookAt(new Vector(1984.4445f, 157.9501f, 55.9384f));
+            Position = new Vector3(1984.4445f, 157.9501f, 55.9384f);
+            CameraPosition = new Vector3(1984.4445f, 160.9501f, 55.9384f);
+            SetCameraLookAt(new Vector3(1984.4445f, 157.9501f, 55.9384f));
             Angle = 0;
 
             switch (e.ClassId)
@@ -71,18 +72,18 @@ namespace RiverShell.World
 
             if (PVars.Get<int>("BuildingsRemoved") == 0)
             {
-                GlobalObject.Remove(this, 9090, new Vector(2317.0859f, 572.2656f, -20.9688f), 10.0f);
-                GlobalObject.Remove(this, 9091, new Vector(2317.0859f, 572.2656f, -20.9688f), 10.0f);
-                GlobalObject.Remove(this, 13483, new Vector(2113.5781f, -96.7344f, 0.9844f), 0.25f);
-                GlobalObject.Remove(this, 12990, new Vector(2113.5781f, -96.7344f, 0.9844f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2119.8203f, -84.4063f, -0.0703f), 0.25f);
-                GlobalObject.Remove(this, 1369, new Vector(2104.0156f, -105.2656f, 1.7031f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2122.3750f, -83.3828f, 0.4609f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2119.5313f, -82.8906f, -0.1641f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2120.5156f, -79.0859f, 0.2188f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2119.4688f, -69.7344f, 0.2266f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2119.4922f, -73.6172f, 0.1250f), 0.25f);
-                GlobalObject.Remove(this, 935, new Vector(2117.8438f, -67.8359f, 0.1328f), 0.25f);
+                GlobalObject.Remove(this, 9090, new Vector3(2317.0859f, 572.2656f, -20.9688f), 10.0f);
+                GlobalObject.Remove(this, 9091, new Vector3(2317.0859f, 572.2656f, -20.9688f), 10.0f);
+                GlobalObject.Remove(this, 13483, new Vector3(2113.5781f, -96.7344f, 0.9844f), 0.25f);
+                GlobalObject.Remove(this, 12990, new Vector3(2113.5781f, -96.7344f, 0.9844f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2119.8203f, -84.4063f, -0.0703f), 0.25f);
+                GlobalObject.Remove(this, 1369, new Vector3(2104.0156f, -105.2656f, 1.7031f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2122.3750f, -83.3828f, 0.4609f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2119.5313f, -82.8906f, -0.1641f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2120.5156f, -79.0859f, 0.2188f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2119.4688f, -69.7344f, 0.2266f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2119.4922f, -73.6172f, 0.1250f), 0.25f);
+                GlobalObject.Remove(this, 935, new Vector3(2117.8438f, -67.8359f, 0.1328f), 0.25f);
 
                 PVars["BuildingsRemoved"] = 1;
             }

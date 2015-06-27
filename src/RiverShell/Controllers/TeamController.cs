@@ -16,7 +16,7 @@ using SampSharp.GameMode.Controllers;
 
 namespace RiverShell.Controllers
 {
-    public class TeamController : ITypeProvider, IController
+    public class TeamController : ITypeProvider
     {
         public void RegisterTypes()
         {
