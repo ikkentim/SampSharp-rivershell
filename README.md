@@ -1,11 +1,12 @@
-SA-MP# RiverShell
-====================
+RiverShell
+==========
 
-The _RiverShell_ gamemode in this repository is the same as the version shiped withevery copy of the [SA-MP server] package, but has been converted to C#/[SA-MP#].
+https://github.com/SampSharp/sample-gm-rivershell
 
-If you find any problems or have questions, submit an issue.
 
-[sa-mp server]: http://sa-mp.com/download.php
-[sa-mp#]: https://github.com/ikkentim/SampSharp
+SampSharp Grandlarc
+===================
+This repository has been moved:
 
-[![Analytics](https://ga-beacon.appspot.com/UA-58691640-2/SampSharp-rivershell/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+- SampSharp.GameMode variant: https://github.com/SampSharp/sample-gm-rivershell
+- SampSharp.Entities variant: https://github.com/SampSharp/sample-ecs-rivershell
